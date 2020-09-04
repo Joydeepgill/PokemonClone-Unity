@@ -1,0 +1,5 @@
+
+public class RandomizeStats : MonoBehaivour
+{
+
+}
