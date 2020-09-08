@@ -10,9 +10,13 @@ public class PokemonBattle : Monobehaivour
     //Returns true if a player is able to use available items 
     public bool useMedicine(string item)
     {
-       return medication.Contains(item);
+        if (useMedicine.Contains(item)) {
+            Console.WriteLine("You can use the medicine"); 
+        } else {
+            Console.WriteLine("Sorry you cannot use the medicine item you selected"); 
+        }
     } 
-
+    //Level change, damage, 
     public int drainHP(Pokemon pokemon)
     {
         int baseHP = pokemon.getHP(); 
