@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class PokemonBattle : Monobehaivour
 { 
@@ -12,15 +13,22 @@ public class PokemonBattle : Monobehaivour
        return medication.Contains(item);
     } 
 
-    public void drainHP()
+    public int drainHP(Pokemon pokemon)
     {
-        
+        int baseHP = pokemon.getHP(); 
+        int powerMove = pokemon.getPower(); 
+        int currentHP = baseHP - powerMove; 
+        return currentHP; 
     }
 
     //TODO: Calculate the pokemon damamge depending on the type of attack 
     //Pass in attack type
-    public void calculateDamage() {
-        //Depends on attack type 
+    public void calculateDamage(Pokemon pokemon) {
+        //get the pokemon attack type & power 
+        int lvl = pokemon.getLevel(); 
+        int attkPwer = pokemon.getAttackPower(); 
 
+        //TODO: Damage formula 
+        int damage = Math.Floor((2 + lvl/ 5 + 2));
     }
 }
