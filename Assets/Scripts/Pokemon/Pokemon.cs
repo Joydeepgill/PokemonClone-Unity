@@ -44,6 +44,7 @@ public class Pokemon : Monobehaivour
 
     enum attacks {
         tackle, 
-        
+        TailWhip, 
+        Bite
     }; 
 }
