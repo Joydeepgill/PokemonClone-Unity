@@ -1,7 +1,7 @@
 public class PlayerInventory : MonoBehaviour
 {
-    Dictionary<string, int> medicineBag = new Dictionary<string, int>();
-    Dictionary<string, int> pokeBallBag = new Dictionary<string, int>();
+    //TODO: Research which data structure can store items in inventory
+    Dictionary<string, int> bag = new Dictionary<string, int>();
 
     //Adds medicine within the medicine bag
     public void addPlayer_Medication(TKey key, TValue value)
@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
         //bool represents if item can be used or not 
         bool use = false; 
         //Check if the item is contained in the medicine bag 
-        foreach(Dictionary<string, int> entry in medicineBag)
+        foreach(Dictionary<string, int> entry in bag)
         {
             if(entry.key == item && entry.value >= 1)
             {
