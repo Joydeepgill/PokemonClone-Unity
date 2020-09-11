@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Pokemon : Monobehaivour
 {
-    public int attackPower, speed, spAtk, spDef, defense, HP, level; 
+    public int attack, speed, spAtk, spDef, defense, HP, level, power; 
     //Constructor 
-    public Pokemon(int attackPower, int speed, int spAtk, int spDef, int defense, int HP, int level)
+    public Pokemon(int attack, int speed, int spAtk, int spDef, int defense, int HP, int level)
     {
         this.pokemonName = pokemonName; 
         this.attack = attack;
@@ -20,8 +20,30 @@ public class Pokemon : Monobehaivour
         return this.level; 
     }
 
-    public int getAttackPower() {
-        return this.attackPower; 
+    public int getHP () {
+        return this.HP; 
+    }
+
+    //Represents the base attack stat of the pokemon itself.
+    public int getAttackStat() {
+        return this.attack; 
+    }
+
+    public int getDefenseStat() {
+        return this.defense; 
+    }
+
+    public int getSpeedStat() {
+        return this.speed; 
+    }
+
+    public int getSpAttk() {
+        return this.spAtk; 
+    }
+
+    //Get the power of of the used move 
+    public double getPower(Pokemon pokemon) {
+        
     }
 
     //Enum representing different pokemon types 
@@ -46,7 +68,7 @@ public class Pokemon : Monobehaivour
     }; 
 
     enum attack_types
-    {
+    {  
         physical, 
         special
     }; 
@@ -56,4 +78,8 @@ public class Pokemon : Monobehaivour
         TailWhip, 
         Bite
     }; 
+
+    public void RandomizeAttack() {
+        //Add a dictionary which includes attack and attack power 
+    }
 }
