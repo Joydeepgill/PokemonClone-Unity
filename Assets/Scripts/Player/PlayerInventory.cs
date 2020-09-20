@@ -1,17 +1,19 @@
 public class PlayerInventory : MonoBehaviour
 {
-    //TODO: Research which data structure can store items in inventory
-    Dictionary<string, int> bag = new Dictionary<string, int>();
+    var bag = new Dictionary<srting, Dictionary<string, int>>{
+        {"Medicine", new Dictionary<string, int>{{"Burn Heal", 1}, {"Potion", 10}, {"Heal Powder", 1}}}, 
+        {"PokeBall", new Dictionary<string, int>{{"Pokeball", 15}, {"Friend Ball", 20}, {"Ultra Ball", 20}}}
+    }; 
 
     //Adds medicine within the medicine bag
     public void addPlayer_Medication(TKey key, TValue value)
     {
-        medicineBag.Add(key, value); 
+        bag.Add(key, value); 
     } 
 
     public void player_PokeBalls(TKey key, TValue value)
     {
-        pokeBallBag.Add(key, value);  
+        bag.Add(key, value);  
     } 
 
     //Check if item is contained in the inventory (player bag)
@@ -19,9 +21,10 @@ public class PlayerInventory : MonoBehaviour
     {
         //bool represents if item can be used or not 
         bool use = false; 
-        //Check if the item is contained in the medicine bag 
+        //Check if the item is contained in the bag 
         foreach(Dictionary<string, int> entry in bag)
         {
+            //Check if the item exists in the bag 
             if(entry.key == item && entry.value >= 1)
             {
                 use = true; 
