@@ -3,8 +3,8 @@ public class PlayerInventory : MonoBehaviour
     //Adding a test comment 
 
     //Constructor: initalize an empty dictionary 
-    public PlayerInventory (Dictionary<string <string, int>>inventory) {
-        inventory = new Dictionary<string <string, int>>(); 
+    public PlayerInventory (Dictionary<string, Dictionary<string, int>> inventory) {
+        inventory = new Dictionary<string, Dictionary<string, int>>(); 
     }
 
     //Adds medicine within the medicine bag
