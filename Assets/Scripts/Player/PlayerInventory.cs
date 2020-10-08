@@ -11,7 +11,12 @@ public class PlayerInventory : MonoBehaviour
     public void addItem(Dictionary<string, Dictionary<string, int>> inventory)
     {
         inventory.Add(key, value); 
-    } 
+    }  
+
+    //TODO: Method for deleting items from bag 
+    public void removeItem(Dictionary<string, Dictionary<string, int>> inventory, string item) {
+        //Check if item is already in bag (before removing it)
+    }
 
     //Check if item is contained in the inventory (player bag)
     public bool containsItem(string item)
