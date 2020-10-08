@@ -1,9 +1,11 @@
 public class PlayerInventory : MonoBehaviour
-{
-    var bag = new Dictionary<srting, Dictionary<string, int>>{
-        {"Medicine", new Dictionary<string, int>{{"Burn Heal", 1}, {"Potion", 10}, {"Heal Powder", 1}}}, 
-        {"PokeBall", new Dictionary<string, int>{{"Pokeball", 15}, {"Friend Ball", 20}, {"Ultra Ball", 20}}}
-    }; 
+{  
+    //Adding a test comment 
+
+    //Constructor: initalize an empty dictionary 
+    public PlayerInventory (Dictionary<string <string, int>>inventory) {
+        inventory = new Dictionary<string <string, int>>(); 
+    }
 
     //Adds medicine within the medicine bag
     public void addPlayer_Medication(TKey key, TValue value)
