@@ -8,14 +8,9 @@ public class PlayerInventory : MonoBehaviour
     }
 
     //Adds medicine within the medicine bag
-    public void addPlayer_Medication(TKey key, TValue value)
+    public void addItem(Dictionary<string, Dictionary<string, int>> inventory)
     {
-        bag.Add(key, value); 
-    } 
-
-    public void player_PokeBalls(TKey key, TValue value)
-    {
-        bag.Add(key, value);  
+        inventory.Add(key, value); 
     } 
 
     //Check if item is contained in the inventory (player bag)
