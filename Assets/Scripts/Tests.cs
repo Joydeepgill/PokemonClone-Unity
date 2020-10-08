@@ -8,11 +8,12 @@ public class Tests
 
 	//Tests concerning the PlayerInventory class
 	void TestPlayerInventory () {
-		var bag = new Dictionary<srting, Dictionary<string, int>>{
-        {"Medicine", new Dictionary<string, int>{{"Burn Heal", 1}, {"Potion", 10}, {"Heal Powder", 1}}}, 
-        {"PokeBall", new Dictionary<string, int>{{"Pokeball", 15}, {"Friend Ball", 20}, {"Ultra Ball", 20}}}
-    	};    
+		Dictionary<string, Dictionary<string, int>> myDict = new Dictionary<string, Dictionary<string, int>>(){
+			{"Pokeballs", new Dictionary<string, int>{"Ultra Ball", 6, "Pokeball", 15}}, 
+			{"Medicine",  new Dictionary<string, int>{"Burn Heal", 3, "Heal Powder", 2}}, 
+		}; 
 
-    	
+		joyInventory = new PlayerInventory(myDict); 
+		joyInventory.addPlayer_Medication(); 
 	}
 }
