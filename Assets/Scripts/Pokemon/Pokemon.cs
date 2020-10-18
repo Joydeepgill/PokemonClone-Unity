@@ -1,8 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Pokemon : Monobehaivour
+public class Pokemon : MonoBehaviour
 {
-    public int attack, speed, spAtk, spDef, defense, HP, level, power; 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }  
+
+     public int attack, speed, spAtk, spDef, defense, HP, level, power; 
     //Constructor 
     public Pokemon(int attack, int speed, int spAtk, int spDef, int defense, int HP, int level)
     {
@@ -81,5 +95,5 @@ public class Pokemon : Monobehaivour
 
     public void RandomizeAttack() {
         //Add a dictionary which includes attack and attack power 
-    }
+    }    
 }

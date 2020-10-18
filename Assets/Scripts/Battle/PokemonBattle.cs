@@ -1,11 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using System;
-
 public class PokemonBattle : Monobehaivour
-{ 
+{  
     PlayerInventory medication = new PlayerInventory();  
     Pokemon bulbasaur = new Pokemon(49, 45, 65, 65, 45); 
-    Pokemon trainerSquirtle = new Pokemon(); 
+    Pokemon trainerSquirtle = new Pokemon();  
+
+     // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    } 
 
     //Returns true if a player is able to use available items 
     public bool useMedicine(string item)

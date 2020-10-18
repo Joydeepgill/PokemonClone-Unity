@@ -1,7 +1,21 @@
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public Pokemon_Inventory: MonoBehaviour
+public class PokemonIventory : MonoBehaviour
 {
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    } 
+
     ArrayList pokemons = new ArrayList(); 
 
 	void addPokemon(Pokemon pokemon)
@@ -21,4 +35,4 @@ public Pokemon_Inventory: MonoBehaviour
     {
         pokemons.remove(pokemon); 
     }
-} 
+}
